@@ -18,7 +18,7 @@ body {
 }
 
 .navigation-bar {
-  background-color: burlywood;
+  background-image: linear-gradient(to right, #2f3c7e, #8aaae5, #fbeaeb);
   height: 70px;
   width: 100%;
 }
@@ -41,9 +41,9 @@ body {
 }
 
 .navigation-bar li a {
-  color: black;
+  color: white;
   font-size: 16px;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: "Jost", Arial, Helvetica, sans-serif;
   text-decoration: none;
   line-height: 70px;
   padding: 5px 15px;
@@ -58,8 +58,24 @@ body {
 }
 
 .centered {
-  position: absolute;
-  top: 50%;
+  /* position: absolute; */
+  /* top: 50%; */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -380%);
+  position: relative;
+  animation: move-words 50s linear infinite;
+  margin: 0;
+}
+
+@keyframes move-words {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.text-center {
+  font-size: 50px;
 }
