@@ -19,6 +19,10 @@ app.get('/explore', function(req, res) {
     res.sendFile(path.join(__dirname, 'views', 'explore.html'));
 });
 
+app.get('/communityhub', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views', 'communityhub.html'));
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server started at http://localhost:${port}`);

@@ -11,41 +11,38 @@
     <link rel="stylesheet" href="/css/explore.css" />
   </head>
   <body>
-    <!-- Navbar Start -->
     <div class="main-section">
-      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top"
+      >
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm">
-              <a class="navbar-brand" href="#">
-                <img
-                  src="images/echosystemLogoColored.png"
-                  alt="logo"
-                  width="50"
-                  height="50"
-                  class="d-inline-block align-text-top img-fluid"
-                />
-                EchoSystem
-              </a>
-            </div>
+          <a class="navbar-brand" href="#">
+            <img
+              src="images/echosystemLogoColored.png"
+              alt="logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top img-fluid"
+            />
+            EchoSystem
+          </a>
+          <div class="ms-auto">
+            <!-- Use ms-auto to align nav items to the right -->
+            <a class="nav-link text-white" href="/">HOME</a>
+            <a class="nav-link text-white" href="/explore">EXPLORE</a>
+            <a class="nav-link text-white" href="/communityhub"
+              >COMMUNITY HUB</a
+            >
           </div>
-
-          <div class="col-sm text-white pl-5">HOME</div>
-
-          <div class="col-sm text-white">EXPLORE</div>
-
-          <div class="col-sm text-white">COMMUNITY HUB</div>
-        
-        </div>
         </div>
       </nav>
     </div>
-    <!-- Navbar End -->
 
-    <div class="header">
-      <h1>EXPLORE</h1>
-    </div>
-
+    <header class="header">
+      <div class="container-fluid">
+        <h1>EXPLORE</h1>
+      </div>
+    </header>
     <!-- Picture Gallery -->
     <div class="container">
       <div class="gallery">
@@ -53,7 +50,7 @@
         <div class="card">
           <img
             src="images/fred1.png"
-            class="card-img-top"
+            class="card-img-top w-50"
             alt="Fred Again.. 1"
           />
           <!-- Optionally, you can add card-body with description or other content here -->

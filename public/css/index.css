@@ -1,0 +1,6 @@
+video {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
