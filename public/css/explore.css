@@ -1,12 +1,53 @@
+.navbar {
+  background-color: #333399; /* Dark blue */
+}
+
+/* GALLERY AND PICTURE CARDS */
 .header {
+  font-size: 200%;
   background-color: #333399; /* dark blue */
   color: #fbeaeb;
-  text-align: center;
-  padding: 20px 0;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  display: flex;
+  padding: 20px;
   margin-bottom: 20px;
-  height: 92vh;
+  height: 20vh; /* This sets the header height to 40% of the viewport height */
 }
-.card-img-top {
-  width: 30%;
-  height: auto;
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+.gallery .card {
+  width: 20%; /* Sets the width of each card to 20% of the gallery container */
+  margin-bottom: 40px; /* Adds space between rows */
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+/* Since .card-img-top only targets the image, if you want to apply flex to the card container, you should use another class */
+.gallery .card-img-top {
+  width: 100%; /* Makes the image take up 100% of the card's width */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Additional styles to ensure wrapping of cards in the gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* This adds space between the cards, adjust as necessary */
+  justify-content: center; /* Aligns items to the start of the container */
+  align-items: center;
+}
+
+.card {
+  width: calc(20% - 10px);
+  margin-bottom: 20px;
 }
