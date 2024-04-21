@@ -1,0 +1,12 @@
+.header {
+  background-color: #333399; /* dark blue */
+  color: #fbeaeb;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  height: 92vh;
+}
+.card-img-top {
+  width: 30%;
+  height: auto;
+}
