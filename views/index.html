@@ -4,19 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>EchoSystem</title>
   </head>
 
   <body>
     <div class="video-background">
-      <video playsinline autoplay muted loop>
-        <source src="path_to_your_video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+      <video playsinline autoplay muted loop id="background-video">
+        <source src="../images/EchoSysVid.mp4" type="video/mp4" />
       </video>
     </div>
 
-    <div class="content">
+    <header class="top-nav">
+      <button class="sign-in-button">SIGN IN</button>
+    </header>
+
+    <main class="content">
       <h1>EchoSystem</h1>
-    </div>
+      <div class="tagline">
+        we <span id="changing-text">amplify</span> musicians
+      </div>
+      <nav class="main-nav">
+        <button class="nav-button" style="color: white">MASTERCLASS</button>
+        <button class="nav-button" style="color: white">EXPLORE</button>
+        <button class="nav-button" style="color: white">COMMUNITY HUB</button>
+      </nav>
+    </main>
   </body>
 </html>

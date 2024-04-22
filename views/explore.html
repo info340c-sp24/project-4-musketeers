@@ -5,38 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/explore.css" />
   </head>
   <body>
+    <!-- Navbar Start -->
     <div class="main-section">
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="images/echosystemLogoColored.png"
-              alt="logo"
-              width="50"
-              height="50"
-              class="d-inline-block align-text-top img-fluid"
-            />
-            EchoSystem
-          </a>
-          <div class="ms-auto">
-            <!-- Use ms-auto to align nav items to the right -->
-            <a class="nav-link text-white" href="/">HOME</a>
-            <a class="nav-link text-white" href="/explore">EXPLORE</a>
-            <a class="nav-link text-white" href="/communityhub"
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid logo-center">
+          <div class="row">
+            <div class="col-12 padding-resp">
+              <a
+                class="navbar-brand mx-auto"
+                href="#"
+                style="padding-left: 7vw"
+              >
+                <img
+                  src="images/echosystemLogoColored.png"
+                  alt="logo"
+                  width="50"
+                  height="50"
+                  class="d-inline-block align-text-top img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm text-white pl-5">
+            <a class="text-white nav-link" href="/">HOME</a>
+          </div>
+
+          <div class="col-sm text-white">
+            <a class="text-white nav-link" href="/masterclass">MASTERCLASS</a>
+          </div>
+
+          <div class="col-sm text-white">
+            <a class="text-white nav-link" href="/communityhub"
               >COMMUNITY HUB</a
             >
           </div>
         </div>
       </nav>
     </div>
+    <!-- Navbar End -->
 
     <header class="header">
       <div class="container-fluid">
@@ -50,16 +65,56 @@
         <div class="card">
           <img
             src="images/fred1.png"
-            class="card-img-top w-50"
+            class="card-img-top"
             alt="Fred Again.. 1"
           />
-          <!-- Optionally, you can add card-body with description or other content here -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Picture 2 -->
         <div class="card">
           <img src="images/peggy1.png" class="card-img-top" alt="Peggy Gou 1" />
-          <!-- Card content -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Picture 3 -->
@@ -69,9 +124,28 @@
             class="card-img-top"
             alt="Fred Again.. 2"
           />
-          <!-- Card content -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <!-- Repeat the column block for each additional image, adjusting the src and alt attributes as necessary -->
 
         <!-- Picture 4 -->
         <div class="card">
@@ -80,49 +154,207 @@
             class="card-img-top"
             alt="John Summit 1"
           />
-          <!-- Card content -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Picture 5 -->
         <div class="card">
-          <img src="images/peggy2.png" class="card-img-top" alt="Peggy Gou 2" />
-          <!-- Card content -->
+          <img
+            src="images/peggy2.png"
+            class="card-img-bottom"
+            alt="Peggy Gou 2"
+          />
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Picture 6 -->
         <div class="card">
           <img
             src="images/john2.png"
-            class="card-img-top"
+            class="card-img-bottom"
             alt="John Summit 2"
           />
-          <!-- Card content -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Picture 7 -->
         <div class="card">
           <img
             src="images/fred3.png"
-            class="card-img-top"
+            class="card-img-bottom"
             alt="Fred Again.. 3"
           />
-          <!-- Card content -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <!-- Picture 8 -->
         <div class="card">
           <img
             src="images/fred4.png"
-            class="card-img-top"
+            class="card-img-bottom"
             alt="Fred Again.. 4"
           />
-          <!-- Card content -->
+          <div class="save">
+            <svg
+              aria-label="Save"
+              class="_8-yf5"
+              color="#262626"
+              fill="#262626"
+              height="24"
+              role="img"
+              viewBox="0 0 48 48"
+              width="24"
+            >
+              <path
+                d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                    47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                    3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                    1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                    0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                    1.4-.9 2.2-.9z"
+              ></path>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <!-- Footer Start -->
+    <section>
+      <!-- Footer -->
+      <footer
+        class="text-center text-white"
+        style="
+          background: linear-gradient(
+            90deg,
+            #2f3c7e 0%,
+            #8aaae5 47.5%,
+            #fbeaeb 97.5%
+          );
+        "
+      >
+        <!-- Grid container -->
+        <div class="container p-4 pb-0" style="justify-content: center">
+          <!-- Section: CTA -->
+          <section>
+            <div class="justify-content-center">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">Register For Free</span>
+                <button
+                  type="button"
+                  class="btn btn-outline-light btn-rounded rounded-pill"
+                >
+                  <a
+                    href="/signup"
+                    class="text-white"
+                    style="text-decoration: none"
+                    >Sign In</a
+                  >
+                </button>
+              </p>
+            </div>
+          </section>
+          <!-- Section: CTA -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: black">
+          © 2024 Copyright: 4 Musketeers Inc.
+          <a class="text-white" href="/proposal">Proposal</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </section>
+    <!-- Footer End -->
+
+    <script>
+      // Add your JavaScript here
+      document.querySelector(".save").addEventListener("click", function () {
+        var path = this.querySelector("svg path");
+        // Toggle the class
+        path.classList.toggle("saved");
+      });
+    </script>
   </body>
 </html>

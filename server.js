@@ -11,6 +11,10 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
+app.get('/proposal', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views', 'proposal.html'));
+});
+
 app.get('/masterclass', function(req, res) {
     res.sendFile(path.join(__dirname, 'views', 'masterclass.html'));
 });
@@ -21,6 +25,10 @@ app.get('/explore', function(req, res) {
 
 app.get('/communityhub', function(req, res) {
     res.sendFile(path.join(__dirname, 'views', 'communityhub.html'));
+});
+
+app.get('/signup', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
 
 // Start the server
