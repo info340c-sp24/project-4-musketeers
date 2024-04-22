@@ -96,6 +96,10 @@ svg path.saved {
   fill: #8aaae5; /* Or any other color */
 }
 
+.save svg path {
+  transition: fill 0.2s ease-in-out;
+}
+
 body {
   padding-top: 80px; /* height of the navbar */
   overflow-y: auto;
@@ -179,5 +183,11 @@ footer .container p {
 @media (max-width: 576px) {
   nav.navbar {
     background-color: rgba(0, 0, 0, 0.7); /* Darker for better readability */
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0 5px;
+    padding: 3px 5px;
+    letter-spacing: 0.5px;
   }
 }
