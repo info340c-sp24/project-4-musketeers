@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore</title>
+    <title>CommunityHub</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/explore.css" />
+    <link rel="stylesheet" href="/css/communityhub.css" />
 
     <!-- JavaScript for Save Button -->
     <script>
@@ -29,38 +29,43 @@
   <body>
     <!-- Navbar Start -->
     <div class="main-section">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid logo-center">
-          <div class="row">
-            <div class="col-12 padding-resp">
-              <a
-                class="navbar-brand mx-auto"
-                href="#"
-                style="padding-left: 7vw"
+      <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container-fluid">
+          <!-- Navbar brand/logo -->
+          <a class="navbar-brand" href="#" style="padding-left: 7vw">
+            <img
+              src="images/echosystemLogoColored.png"
+              alt="logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top img-fluid"
+            />
+          </a>
+
+          <!-- Hamburger Menu Toggle Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" style="text-color: white"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="navbar-nav ms-auto" style="text-align: right">
+              <a class="nav-item nav-link text-white" href="/">HOME</a>
+              <!-- <a class="nav-item nav-link text-white" href="/explore"
+                >EXPLORE</a
+              > -->
+              <a class="nav-item nav-link text-white" href="/masterclass"
+                >MASTERCLASS</a
               >
-                <img
-                  src="images/echosystemLogoColored.png"
-                  alt="logo"
-                  width="50"
-                  height="50"
-                  class="d-inline-block align-text-top img-fluid"
-                />
-              </a>
             </div>
-          </div>
-
-          <div class="col-sm text-white pl-5">
-            <a class="text-white nav-link" href="/">HOME</a>
-          </div>
-
-          <div class="col-sm text-white">
-            <a class="text-white nav-link" href="/masterclass">MASTERCLASS</a>
-          </div>
-
-          <div class="col-sm text-white">
-            <a class="text-white nav-link" href="/communityhub"
-              >COMMUNITY HUB</a
-            >
           </div>
         </div>
       </nav>
@@ -69,7 +74,7 @@
 
     <header class="header">
       <div class="container-fluid">
-        <h1>EXPLORE</h1>
+        <h1>COMMUNITY HUB</h1>
       </div>
     </header>
     <!-- Picture Gallery -->
@@ -77,11 +82,13 @@
       <div class="gallery">
         <!-- Picture 1 -->
         <div class="card">
-          <img
-            src="images/fred1.png"
-            class="card-img-top"
-            alt="Fred Again.. 1"
-          />
+          <a href="https://www.instagram.com/fredagainagainagainagainagain?igsh=MWkxYjNsMnBrM3AyYQ==">
+            <img
+              src="images/fred1.png"
+              class="card-img-top"
+              alt="Fred Again.. 1"
+            />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -107,7 +114,9 @@
 
         <!-- Picture 2 -->
         <div class="card">
-          <img src="images/peggy1.png" class="card-img-top" alt="Peggy Gou 1" />
+          <a href="https://www.instagram.com/peggygou_?igsh=MXA0dXJhMDk2Y3UwMg==">
+            <img src="images/peggy1.png" class="card-img-top" alt="Peggy Gou 1" />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -133,11 +142,13 @@
 
         <!-- Picture 3 -->
         <div class="card">
-          <img
-            src="images/fred2.png"
-            class="card-img-top"
-            alt="Fred Again.. 2"
-          />
+          <a href="https://www.instagram.com/fredagainagainagainagainagain?igsh=MWkxYjNsMnBrM3AyYQ==">
+            <img
+              src="images/fred2.png"
+              class="card-img-top"
+              alt="Fred Again.. 2"
+            />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -163,11 +174,13 @@
 
         <!-- Picture 4 -->
         <div class="card">
-          <img
-            src="images/john1.png"
-            class="card-img-top"
-            alt="John Summit 1"
-          />
+          <a href="https://www.instagram.com/johnsummit?igsh=MXdiaXJ1NHliMXc0Zw==">
+            <img
+              src="images/john1.png"
+              class="card-img-top"
+              alt="John Summit 1"
+            />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -193,11 +206,13 @@
 
         <!-- Picture 5 -->
         <div class="card">
-          <img
-            src="images/peggy2.png"
-            class="card-img-bottom"
-            alt="Peggy Gou 2"
-          />
+          <a href="https://www.instagram.com/peggygou_?igsh=MXA0dXJhMDk2Y3UwMg==">
+            <img
+              src="images/peggy2.png"
+              class="card-img-bottom"
+              alt="Peggy Gou 2"
+            />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -223,11 +238,13 @@
 
         <!-- Picture 6 -->
         <div class="card">
-          <img
-            src="images/john2.png"
-            class="card-img-bottom"
-            alt="John Summit 2"
-          />
+          <a href="https://www.instagram.com/johnsummit?igsh=MXdiaXJ1NHliMXc0Zw==">
+            <img
+              src="images/john2.png"
+              class="card-img-bottom"
+              alt="John Summit 2"
+            />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -253,11 +270,13 @@
 
         <!-- Picture 7 -->
         <div class="card">
-          <img
-            src="images/fred3.png"
-            class="card-img-bottom"
-            alt="Fred Again.. 3"
-          />
+          <a href="https://www.instagram.com/fredagainagainagainagainagain?igsh=MWkxYjNsMnBrM3AyYQ==">
+            <img
+              src="images/fred3.png"
+              class="card-img-bottom"
+              alt="Fred Again.. 3"
+            />
+          </a>
           <div class="save">
             <svg
               aria-label="Save"
@@ -283,11 +302,13 @@
 
         <!-- Picture 8 -->
         <div class="card">
-          <img
-            src="images/fred4.png"
-            class="card-img-bottom"
-            alt="Fred Again.. 4"
-          />
+          <a href="https://www.instagram.com/fredagainagainagainagainagain?igsh=MWkxYjNsMnBrM3AyYQ==">
+            <img
+              src="images/fred4.png"
+              class="card-img-bottom"
+              alt="Fred Again.. 4"
+            />
+          </a>
           <!-- save button -->
           <div class="save">
             <svg
@@ -317,33 +338,15 @@
     <!-- Footer Start -->
     <section>
       <!-- Footer -->
-      <footer
-        class="text-center text-white"
-        style="
-          background: linear-gradient(
-            90deg,
-            #2f3c7e 0%,
-            #8aaae5 47.5%,
-            #fbeaeb 97.5%
-          );
-        "
-      >
-        <!-- Grid container -->
+      <footer class="text-center text-white" style="background: linear-gradient(90deg,#2f3c7e 0%,#8aaae5 47.5%,#fbeaeb 97.5%);">
         <div class="container p-4 pb-0" style="justify-content: center">
           <!-- Section: CTA -->
           <section>
             <div class="justify-content-center">
               <p class="d-flex justify-content-center align-items-center">
                 <span class="me-3">Register For Free</span>
-                <button
-                  type="button"
-                  class="btn btn-outline-light btn-rounded rounded-pill"
-                >
-                  <a
-                    href="/signup"
-                    class="text-white"
-                    style="text-decoration: none"
-                    >Sign In</a
+                <button type="button" class="btn btn-outline-light btn-rounded rounded-pill">
+                  <a href="/signup" class="text-white" style="text-decoration: none">Sign In</a
                   >
                 </button>
               </p>

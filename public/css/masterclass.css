@@ -29,7 +29,7 @@ nav.navbar {
 }
 
 /* Navbar Start */
-/* Color of the links BEFORE scroll */
+/*foRE scroll */
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler .fa-bars {
   color: #fff;
@@ -159,4 +159,18 @@ nav.navbar {
   nav.navbar {
     background-color: rgba(0, 0, 0, 0.7); /* Darker for better readability */
   }
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .container-fluid p {
+  width: 100%;
+  text-align: center;
 }

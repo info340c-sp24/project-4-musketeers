@@ -105,9 +105,9 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <div class="navbar-nav ms-auto" style="text-align: right">
               <a class="nav-item nav-link text-white" href="/">HOME</a>
-              <a class="nav-item nav-link text-white" href="/explore"
+              <!-- <a class="nav-item nav-link text-white" href="/explore"
                 >EXPLORE</a
-              >
+              > -->
               <a class="nav-item nav-link text-white" href="/communityhub"
                 >COMMUNITY HUB</a
               >
@@ -128,80 +128,61 @@
 
     <!-- Horizontal scroll -->
     <div class="scroll-container">
-      <div class="scroll-card" style="background-color: #2f3c7e">
+      <a href="/viewall" class="scroll-card" style="background-color: #2f3c7e">
         <h2 style="color: #fbeaeb">VIEW ALL</h2>
         <img class="img-fluid w-100" src="images/piano.png" alt="Piano" />
-      </div>
+      </a>
 
-      <div class="scroll-card" style="background-color: #fbeaeb">
+      <a href="/viewall" class="scroll-card" style="background-color: #fbeaeb">
         <h2 style="color: black">VOCALS</h2>
         <img class="img-fluid w-100" src="images/vocals.png" alt="Vocals" />
-      </div>
+      </a>
 
-      <div class="scroll-card" style="background-color: #8aaae5">
+      <a href="/viewall" class="scroll-card" style="background-color: #8aaae5">
         <h2 style="color: #ffffff">E-GUITAR</h2>
         <img class="img-fluid w-100" src="images/guitar.png" alt="Guitar" />
-      </div>
+      </a>
 
-      <div class="scroll-card" style="background-color: white">
+      <a href="/viewall" class="scroll-card" style="background-color: white">
         <h2 style="color: black">DRUMS</h2>
         <img class="img-fluid" src="images/drums.png" alt="Drums" />
-      </div>
+      </a>
 
-      <div class="scroll-card" style="background-color: #cfcfcf">
+      <a href="/viewall" class="scroll-card" style="background-color: #cfcfcf">
         <h2 style="color: #2f3c7e">EDM</h2>
         <img class="img-fluid" src="images/edm.png" alt="EDM" />
-      </div>
+      </a>
 
-      <div class="scroll-card" style="background-color: #2f3c7e">
+      <a href="/viewall" class="scroll-card" style="background-color: #2f3c7e">
         <h2 style="color: #ffffff">HARP</h2>
         <img class="img-fluid" src="images/harp.png" alt="Harp" />
-      </div>
+      </a>
 
-      <div class="scroll-card" style="background-color: #fbeaeb">
-        <h2>RAP</h2>
+      <a href="/viewall" class="scroll-card" style="background-color: #fbeaeb">
+        <h2 style="color: black">RAP</h2>
         <img class="img-fluid" src="images/rap.png" alt="Rap" />
+      </a>
       </div>
     </div>
+
     <!-- Horizontal scroll end -->
 
     <!-- Footer Start -->
-    <section>
-      <footer
-        class="text-center text-white"
-        style="
-          background: linear-gradient(
-            90deg,
-            #2f3c7e 0%,
-            #8aaae5 47.5%,
-            #fbeaeb 97.5%
-          );
-        "
-      >
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: CTA -->
-          <section>
-            <p class="d-flex justify-content-center align-items-center">
-              <span class="me-3">Register for free</span>
-              <button type="button" class="btn btn-outline-light rounded-pill">
-                Sign up!
-              </button>
-            </p>
-          </section>
-          <!-- Section: CTA -->
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: black">
-          © 2024 4-Musketeers:
-          <a class="text-white" href="/proposal">Proposal</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
-    </section>
+    <footer class="text-center text-white" style="background: linear-gradient(90deg, #2f3c7e 0%, #8aaae5 47.5%, #fbeaeb 97.5%);">
+      <div class="container-fluid p-4 pb-0">
+        <p class="justify-content-center align-items-center">
+          <span class="me-3">Register for free</span>
+          <a href="/signup" class="btn btn-outline-light rounded-pill text-white" role="button" style="text-decoration: none;">Sign Up</a>
+        </p>
+      </div>
+    
+      <div class="text-center p-3" style="background-color: black;">
+        © 2024 4-Musketeers:
+        <a class="text-white" href="/proposal">Project Proposal</a>
+      </div>
+    </footer>
+  </body>
+  
 
     <!-- Footer End -->
-  </body>
 </html>
