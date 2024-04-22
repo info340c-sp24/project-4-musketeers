@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <meta
+      name="author"
+      content="Agnes Bisma, Carolyn Chen, Enrico Pratama, Steven Heng"
+    />
+    <link rel="stylesheet" href="/css/masterclass.css" />
+    <title>EchoSystem - Masterclass</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/echosystemLogoColored.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+
+    .navbar .navbar-brand {
+      font-size: 30px;
+    }
+    .navbar .nav-item {
+      padding: 10px 20px;
+    }
+    .navbar .nav-link {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    .fa-bars {
+      color: #007bff;
+      font-size: 30px;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    #navbarResponsive {
+      justify-content: flex-end; /* Align items to the right */
+    }
+  </style>
+
+  <body>
+    <!-- Navbar Start -->
+    <div class="main-section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container-fluid">
+          <!-- Navbar brand/logo -->
+          <a class="navbar-brand" href="#" style="padding-left: 7vw">
+            <img
+              src="images/echosystemLogoColored.png"
+              alt="logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top img-fluid"
+            />
+            EchoSystem
+          </a>
+
+          <!-- Hamburger Menu Toggle Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" style="text-color: white"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="navbar-nav ms-auto" style="text-align: right">
+              <a class="nav-item nav-link text-white" href="/">HOME</a>
+              <!-- <a class="nav-item nav-link text-white" href="/explore"
+                >EXPLORE</a
+              > -->
+              <a class="nav-item nav-link text-white" href="/communityhub"
+                >COMMUNITY HUB</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="bg-image hover-zoom">
+        <img
+          src="images/heroMasterclass.png"
+          class="bg-image img-fluid w-100"
+          alt="Background"
+        />
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Horizontal scroll -->
+    <div class="scroll-container">
+      <a href="/viewall" class="scroll-card" style="background-color: #2f3c7e">
+        <h2 style="color: #fbeaeb">VIEW ALL</h2>
+        <img class="img-fluid w-100" src="images/piano.png" alt="Piano" />
+      </a>
+
+      <a href="/viewall" class="scroll-card" style="background-color: #fbeaeb">
+        <h2 style="color: black">VOCALS</h2>
+        <img class="img-fluid w-100" src="images/vocals.png" alt="Vocals" />
+      </a>
+
+      <a href="/viewall" class="scroll-card" style="background-color: #8aaae5">
+        <h2 style="color: #ffffff">E-GUITAR</h2>
+        <img class="img-fluid w-100" src="images/guitar.png" alt="Guitar" />
+      </a>
+
+      <a href="/viewall" class="scroll-card" style="background-color: white">
+        <h2 style="color: black">DRUMS</h2>
+        <img class="img-fluid" src="images/drums.png" alt="Drums" />
+      </a>
+
+      <a href="/viewall" class="scroll-card" style="background-color: #cfcfcf">
+        <h2 style="color: #2f3c7e">EDM</h2>
+        <img class="img-fluid" src="images/edm.png" alt="EDM" />
+      </a>
+
+      <a href="/viewall" class="scroll-card" style="background-color: #2f3c7e">
+        <h2 style="color: #ffffff">HARP</h2>
+        <img class="img-fluid" src="images/harp.png" alt="Harp" />
+      </a>
+
+      <a href="/viewall" class="scroll-card" style="background-color: #fbeaeb">
+        <h2 style="color: black">RAP</h2>
+        <img class="img-fluid" src="images/rap.png" alt="Rap" />
+      </a>
+      </div>
+    </div>
+
+    <!-- Horizontal scroll end -->
+
+    <!-- Footer Start -->
+    <footer class="text-center text-white" style="background: linear-gradient(90deg, #2f3c7e 0%, #8aaae5 47.5%, #fbeaeb 97.5%);">
+      <div class="container-fluid p-4 pb-0">
+        <p class="justify-content-center align-items-center">
+          <span class="me-3">Register for free</span>
+          <a href="/signup" class="btn btn-outline-light rounded-pill text-white" role="button" style="text-decoration: none;">Sign Up</a>
+        </p>
+      </div>
+    
+      <div class="text-center p-3" style="background-color: black;">
+        © 2024 4-Musketeers:
+        <a class="text-white" href="/proposal">Project Proposal</a>
+      </div>
+    </footer>
+  </body>
+  
+
+    <!-- Footer End -->
+</html>

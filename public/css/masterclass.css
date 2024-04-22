@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main-section {
+  position: relative; /* Ensures navbar is positioned relative to this container */
+  height: 60vh;
+}
+
+.main-section img.bg-image {
+  width: 100%;
+  height: 60vh; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Puts the image behind the content */
+}
+
+nav.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Navbar Start */
+/*foRE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler .fa-bars {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler .fa-bars {
+  color: #4f4f4f;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Horizontal Scroll Start */
+.scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  align-items: flex-start;
+}
+
+@media (max-width: 574px) {
+  /* .logo-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar .container-fluid {
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    padding-left: 0 !important;
+  }
+
+  .padding-resp {
+    padding-left: 20vw;
+  } */
+}
+
+.scroll-card {
+  flex: 0 0 auto;
+  width: calc(28.57% - 20px);
+  height: 33rem;
+  box-sizing: border-box;
+  background-color: inherit;
+  position: relative;
+}
+
+.scroll-card img {
+  width: 100%;
+  height: 33rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.scroll-card h2 {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 4.7em;
+  color: inherit;
+  z-index: 2;
+  text-align: left;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .scroll-card {
+    width: 50%; /* Show 2 cards initially */
+    font-size: 2em; /* Adjust font size for readability */
+  }
+
+  .scroll-card h2 {
+    font-size: 2em; /* Adjust this value as needed for smaller screens */
+    top: 20px; /* Adjust top position for proper alignment */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+  }
+
+  .main-section img.bg-image {
+    height: 50vh;
+  }
+
+  .scroll-card img {
+    height: auto; /* Make the height adjust to the width */
+    position: relative; /* If you want the images below the text and not absolute */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 764px) {
+  .scroll-card {
+    width: calc(100% - 20px); /* Show 1 card at a time */
+  }
+
+  .scroll-card h2 {
+    font-size: 1.5em; /* Even smaller text for mobile */
+    top: 20px; /* Adjust text position */
+  }
+
+  .main-section {
+    height: 50vh; /* Reduce height for mobile */
+  }
+
+  .main-section img.bg-image {
+    height: 50vh;
+  }
+
+  nav.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker for better readability */
+  }
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .container-fluid p {
+  width: 100%;
+  text-align: center;
+}
