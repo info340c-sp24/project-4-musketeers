@@ -158,6 +158,9 @@ nav.navbar {
   outline: none;
 }
 
+.container button {
+}
+
 .form-container {
   position: absolute;
   top: 0;
