@@ -10,18 +10,39 @@ html {
 }
 
 .main-section {
-  position: relative; /* Ensures navbar is positioned relative to this container */
+  position: relative;
   height: 60vh;
 }
 
+/* Image Start */
+.masterclass-logo-large {
+  display: block;
+}
+
+.masterclass-logo-small {
+  display: none;
+}
+
+/* Media query for screens with a max width of 992px */
+@media (max-width: 992px) {
+  .masterclass-logo-large {
+    display: none;
+  }
+
+  .masterclass-logo-small {
+    display: block;
+  }
+}
+/* Image End */
+
 .main-section img.bg-image {
   width: 100%;
-  height: 60vh; /* Adjust the height as needed */
-  object-fit: cover; /* Ensures the image covers the area without stretching */
+  height: 60vh;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Puts the image behind the content */
+  z-index: -1;
 }
 
 nav.navbar {
@@ -29,24 +50,43 @@ nav.navbar {
 }
 
 /* Navbar Start */
-/*foRE scroll */
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler .fa-bars {
   color: #fff;
 }
 
-/* Color of the links AFTER scroll */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%238AAAE5' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 .navbar-scrolled .nav-link,
 .navbar-scrolled .navbar-toggler .fa-bars {
   color: #4f4f4f;
 }
 
-/* Color of the navbar AFTER scroll */
 .navbar-scrolled {
   background-color: #fff;
 }
 
-/* An optional height of the navbar AFTER scroll */
+.navbar .navbar-brand {
+  font-size: 30px;
+}
+.navbar .nav-item {
+  padding: 10px 20px;
+}
+.navbar .nav-link {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.fa-bars {
+  color: #007bff;
+  font-size: 30px;
+}
+
+#navbarResponsive {
+  justify-content: flex-end; /* Align items to the right */
+}
+
 .navbar.navbar-scroll.navbar-scrolled {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -59,26 +99,6 @@ nav.navbar {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   align-items: flex-start;
-}
-
-@media (max-width: 574px) {
-  /* .logo-center {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .navbar .container-fluid {
-    justify-content: center;
-  }
-
-  .navbar-brand {
-    padding-left: 0 !important;
-  }
-
-  .padding-resp {
-    padding-left: 20vw;
-  } */
 }
 
 .scroll-card {
