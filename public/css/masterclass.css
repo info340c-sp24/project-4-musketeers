@@ -75,9 +75,13 @@ nav.navbar {
   padding: 10px 20px;
 }
 .navbar .nav-link {
-  font-size: 20px;
+  font-size: calc(0.7rem + 1vh);
   margin-left: 10px;
+  font-weight: 300;
+  padding: 20px;
+  margin-left: 90px;
 }
+
 .fa-bars {
   color: #007bff;
   font-size: 30px;
