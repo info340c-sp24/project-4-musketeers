@@ -4,5 +4,5 @@ This repository contains code for an interactive information web app, created fo
 
 # Installation Guide
 
-- npm intall
+- npm install
 - node server.js

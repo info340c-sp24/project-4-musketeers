@@ -179,6 +179,10 @@ footer .container p {
   text-align: center;
 }
 
+.btn-outline-light a.text-white:hover {
+  color: black !important;
+}
+
 /* For mobile devices */
 @media (max-width: 576px) {
   nav.navbar {

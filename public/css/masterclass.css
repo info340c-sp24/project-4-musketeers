@@ -198,3 +198,7 @@ footer .container-fluid p {
   width: 100%;
   text-align: center;
 }
+
+.btn-outline-light a.text-white:hover {
+  color: black !important;
+}

@@ -168,6 +168,15 @@ nav.navbar {
   transition: all 0.6s ease-in-out;
 }
 
+.form-container.sign-in button {
+  background-color: #26326e;
+  color: white;
+}
+
+.form-container.sign-up button {
+  background-color: #2f3c7e;
+}
+
 .sign-in {
   left: 0;
   width: 50%;

@@ -35,6 +35,14 @@ app.get('/signup', function(req, res) {
     res.sendFile(path.join(__dirname, 'views', 'signup.html'));
 });
 
+app.get('/favorites', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views', 'favorites.html'));
+});
+
+app.get('/viewall2', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views', 'viewall2.html'));
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server started at http://localhost:${port}`);

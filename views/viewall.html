@@ -16,21 +16,8 @@
     type="image/x-icon"
     href="images/echosystemLogoColored.png"
   />
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.body.addEventListener("click", function (event) {
-          if (event.target.closest(".save")) {
-            var path =
-              event.target.querySelector("svg path") ||
-              event.target.closest(".save").querySelector("svg path");
-            path.classList.toggle("saved");
-          }
-        });
-      });
-    </script>
-
   </head>
+
   <body>
     <!-- Navbar Start -->
     <div class="main-section">
@@ -78,13 +65,42 @@
       </div>
     </header>
 
+    <!--Searchbar Start -->
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search masterclass here.."
+        />
+        <button id="search">Search</button>
+      </div>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('vocals')">
+          Vocals
+        </button>
+        <button class="button-value" onclick="filterProduct('e-guitar')">
+          E-guitar
+        </button>
+        <button class="button-value" onclick="filterProduct('drums')">
+          Drums
+        </button>
+        <button class="button-value" onclick="filterProduct('edm')">
+          EDM
+        </button>
+      </div>
+      <div id="products"></div>
+    </div>
+    <!--Searchbar End-->
+
     <div class="container-fluid">
       <div class="gallery">
         <!-- Card 1 -->
         <div class="card">
           <a href="https://www.youtube.com/watch?v=I6kfJJRxBSo">
             <img
-              src="images/Masterclass1.png"
+              src="images/mc-1.jpeg"
               class="card-img-top"
               alt="Community Canvas"
             />
@@ -249,5 +265,7 @@
         </div>
       </footer>
     </section>
+    <!-- Script -->
+    <script src="/js/viewall.js"></script>
   </body>
 </html>

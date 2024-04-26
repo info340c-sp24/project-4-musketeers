@@ -16,18 +16,38 @@ nav {
   background-color: #333399;
 }
 
+@media (max-width: 768px) {
+  h1.title-font {
+    font-size: calc(2rem + 2vw);
+    margin: 0;
+  }
+
+  h1.center-small {
+    text-align: center;
+  }
+
+  .center-align {
+    align-items: center;
+    justify-content: center;
+  }
+
+  header.height-change {
+    height: 25vh;
+  }
+}
+
 nav.navbar {
   background-color: #333399;
   color: white;
-  display: flex; 
-  justify-content: space-evenly; 
-  align-items: center; 
-  width: 100%; 
-  padding: 10px 0; 
-  position: fixed; 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1030; 
+  z-index: 1030;
 }
 
 .navbar-nav {
@@ -43,15 +63,15 @@ nav.navbar {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 100%; 
-  padding: 0 15px; 
+  width: 100%;
+  padding: 0 15px;
 }
 
 .navbar-brand,
 .nav-link {
-  color: white; 
-  text-decoration: none; 
-  padding: 10px 15px; 
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
 }
 .nav-link {
   padding: 10px 15px;
@@ -81,6 +101,44 @@ nav.navbar {
   padding-right: 0;
 }
 /* NAVBAR END */
+
+/* BUTTON FAVORITES START */
+.btn1 {
+  outline: none;
+  margin-top: 20px;
+  font-size: 25px; /* Adjust the font size as needed */
+  padding: 10px 20px; /* Padding inside the buttons */
+  border: none; /* Remove any borders */
+  background-color: transparent; /* No background for a text-like button */
+  cursor: pointer; /* Changes the cursor on hover */
+  position: relative; /* For positioning the pseudo-element */
+  outline: none; /* Remove focus outline */
+  color: #000; /* Text color */
+}
+
+/* Remove text decoration to prevent default underlining */
+.btn1:hover {
+  text-decoration: none;
+}
+
+.btn1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #2f3c7e, #fbeaeb, #8aaae5);
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Expand the pseudo-element on hover */
+.btn1:hover::after {
+  width: 100%;
+}
+/* BUTTON FAVORITES END */
 
 /* GALLERY AND PICTURE CARDS */
 .save {
@@ -153,6 +211,7 @@ h1 {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0;
   gap: 10px; /* This adds space between the cards, adjust as necessary */
   justify-content: space-around; /* Aligns items to the start of the container */
   align-items: flex-start;
@@ -179,15 +238,6 @@ footer .container p {
   text-align: center;
 }
 
-/* For mobile devices */
-@media (max-width: 576px) {
-  nav.navbar {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker for better readability */
-  }
-
-  .navbar-nav .nav-link {
-    margin: 0 5px;
-    padding: 3px 5px;
-    letter-spacing: 0.5px;
-  }
+.btn-outline-light a.text-white:hover {
+  color: black !important;
 }
