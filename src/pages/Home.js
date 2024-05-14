@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 
 const Home = () => {
     return (
-      <Navbar />
+      <p className="font-bold">Home page.</p>
     );
   };
   
