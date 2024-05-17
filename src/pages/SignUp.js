@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -12,6 +13,9 @@ const SignUp = () => {
 
   return (
     <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+       <Helmet>
+        <title>EchoSystem | Sign Up</title>
+      </Helmet>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="text-center text-3xl font-extrabold text-gray-900">Sign up for an account</h2>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

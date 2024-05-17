@@ -1,0 +1,47 @@
+/* Example CSS for the CommunityHub component */
+.active-title {
+  border-bottom: 4px solid black; /* Change as per your design requirements */
+}
+
+.header {
+  color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.card .card-body {
+  padding: 20px;
+}
+
+.card .card-body h2 {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+}
+
+.card .card-body p {
+  font-size: 1em;
+  margin: 0 0 10px 0;
+}
+
+.card .card-body .card-actions {
+  text-align: right;
+}
+
+.card .card-body .btn {
+  background-color: white;
+  color: #fff;
+}

@@ -1,35 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Used for navigation without reloading the page
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
-  return (
-    <div className="container mx-auto px-4 text-center">
-      <h1 className="text-4xl font-bold text-gray-800 mt-10 mb-5">Welcome to EchoSystem</h1>
-      <p className="text-xl text-gray-600 mb-10">
-        We amplify, empower, elevate, and harmonize the talents of musicians from around the globe.
-      </p>
-      
-      <div className="mb-8">
-        <h2 className="text-3xl text-gray-700 mb-3">Explore Our Masterclasses</h2>
-        <p className="text-gray-500 mb-6">
-          Join our exclusive sessions and learn from the best in the industry.
-        </p>
-        <Link to="/masterclass" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Discover Masterclasses
-        </Link>
-      </div>
+  const [changingText, setChangingText] = useState('amplify');
+  const texts = ["amplify", "empower", "elevate", "harmonize"];
+  let count = 0;
 
-      <div>
-        <h2 className="text-3xl text-gray-700 mb-3">Join Our Community</h2>
-        <p className="text-gray-500 mb-6">
-          Connect with fellow musicians and enthusiasts in our community hub.
-        </p>
-        <Link to="/communityhub" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-          Visit the Community Hub
-        </Link>
-      </div>
-    </div>
+  useEffect(() => {
+    const updateText = () => {
+      setChangingText(texts[count % texts.length]);
+      count++;
+    };
+
+    const intervalId = setInterval(updateText, 2500);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    // <video className="h-full w-full rounded-lg" autoPlay playsInline muted loop>
+    //   <source src="../images/EchoSysVid.mp4" type="video/mp4" />
+    //   Your browser does not support the video tag.
+    // </video>
+    <div className="relative flex items-center  
+        justify-center h-screen overflow-hidden"> 
+        <video src="../images/EchoSysVid.mp4"
+            autoplay="{true}" loop muted 
+            className="absolute z-10 w-auto  
+            min-w-full min-h-full max-w-none"> 
+        </video> 
+    </div> 
+
   );
 };
 
 export default Home;
+
+<source src="../images/EchoSysVid.mp4" type="video/mp4" />
