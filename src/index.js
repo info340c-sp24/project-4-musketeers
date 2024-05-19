@@ -13,7 +13,6 @@ import SignUp from './pages/SignUp';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function App() {
   return (
     <ThemeProvider>

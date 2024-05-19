@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar, Nav, Container, Row, Col, Button, Card, Figure, Image, Footer } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import SearchBarComponent from "../components/MasterCard";
