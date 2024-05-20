@@ -1,0 +1,30 @@
+[debug] [2024-05-20T07:25:44.178Z] ----------------------------------------------------------------------
+[debug] [2024-05-20T07:25:44.181Z] Command:       /opt/homebrew/Cellar/node/21.7.1/bin/node /opt/homebrew/bin/firebase deploy --only hosting
+[debug] [2024-05-20T07:25:44.181Z] CLI Version:   13.9.0
+[debug] [2024-05-20T07:25:44.182Z] Platform:      darwin
+[debug] [2024-05-20T07:25:44.182Z] Node Version:  v21.7.1
+[debug] [2024-05-20T07:25:44.182Z] Time:          Mon May 20 2024 00:25:44 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-05-20T07:25:44.182Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-20T07:25:44.216Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-20T07:25:44.216Z] > authorizing via signed-in user (enricop@uw.edu)
+[debug] [2024-05-20T07:25:44.216Z] [iam] checking project echosystem-485df for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-20T07:25:44.217Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/echosystem-485df:testIamPermissions [none]
+[debug] [2024-05-20T07:25:44.217Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/echosystem-485df:testIamPermissions x-goog-quota-user=projects/echosystem-485df
+[debug] [2024-05-20T07:25:44.217Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/echosystem-485df:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-20T07:25:44.339Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/echosystem-485df:testIamPermissions 200
+[debug] [2024-05-20T07:25:44.339Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/echosystem-485df:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-20T07:25:44.340Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/echosystem-485df [none]
+[debug] [2024-05-20T07:25:44.499Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/echosystem-485df 200
+[debug] [2024-05-20T07:25:44.499Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/echosystem-485df {"projectId":"echosystem-485df","projectNumber":"251611996826","displayName":"EchoSystem","name":"projects/echosystem-485df","resources":{"hostingSite":"echosystem-485df"},"state":"ACTIVE","etag":"1_ba1cd871-3ffe-4bd1-b172-9968d69a5065"}
+[info] 
+[info] === Deploying to 'echosystem-485df'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-20T07:25:44.505Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/echosystem-485df/versions [none]
+[debug] [2024-05-20T07:25:44.505Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/echosystem-485df/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-20T07:25:45.685Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/echosystem-485df/versions 200
+[debug] [2024-05-20T07:25:45.685Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/echosystem-485df/versions {"name":"projects/251611996826/sites/echosystem-485df/versions/49d093dc6f56b7fa","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[echosystem-485df]: beginning deploy... 
+[info] i  hosting[echosystem-485df]: found 52 files in build 
+[debug] [2024-05-20T07:25:45.692Z] [hosting] uploading with 200 concurrency
