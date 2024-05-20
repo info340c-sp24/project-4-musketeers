@@ -31,7 +31,7 @@ const Home = () => {
       />
       <div className="absolute top-0 right-0 mt-4 mr-4 z-20 flex space-x-4">
         <Link to="/signup" className="nav-button text-white">SIGN UP</Link>
-        <Link to="/masterclass" className="nav-button text-white">MASTERCLASS</Link>
+        <Link to="/mastercards" className="nav-button text-white">MASTERCLASS</Link>
         <Link to="/communityhub" className="nav-button text-white">COMMUNITY HUB</Link>
       </div>
       <div className="relative z-20 text-center text-white">
