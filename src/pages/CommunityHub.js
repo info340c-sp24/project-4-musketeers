@@ -63,7 +63,7 @@ function CommunityHub() {
       <div className="flex justify-center items-center mt-6">
         <div className="text-center mx-4">
           <button className="text-xl font-semibold border-b-4 border-transparent hover:border-black" onClick={resetFilter}>
-            Exploreeeeee
+            Explore
           </button>
         </div>
         <div className="text-center mx-4">
