@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
 const CommunityCard = ({ card, isBookmarked, onBookmarkToggle }) => {
   return (
@@ -16,7 +13,7 @@ const CommunityCard = ({ card, isBookmarked, onBookmarkToggle }) => {
           <p>{card.description}</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary mt-2" onClick={onBookmarkToggle}>
-              <FontAwesomeIcon icon={isBookmarked ? fasHeart : farHeart} style={{ color: isBookmarked ? 'black' : 'gray' }} />
+              {isBookmarked ? 'Unbookmark' : 'Bookmark'}
             </button>
           </div>
         </div>

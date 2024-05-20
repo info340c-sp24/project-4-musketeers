@@ -1,9 +1,7 @@
 /* Example CSS for the CommunityHub component */
-.active-title {
-  border-bottom: 4px solid black; /* Change as per your design requirements */
-}
 
 .header {
+  background-color: #2f3c7e;
   color: #f1f1f1;
   padding: 20px;
   text-align: center;
@@ -13,7 +11,7 @@
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 15px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -42,6 +40,10 @@
 }
 
 .card .card-body .btn {
-  background-color: white;
+  background-color: #2f3c7e;
   color: #fff;
+}
+
+.btn:hover {
+  background-color: #1f2c5e;
 }

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import CommunityCard from '../components/CommunityCard'; // Adjust the path as necessary
-import '../communityhub.css';
+import CommunityCard from '../components/CommunityCard'; 
+import './communityhub.css';
 
 function CommunityHub() {
   const [bookmarkedCards, setBookmarkedCards] = useState([]);
   const [filtered, setFiltered] = useState(false);
-  const [activeTab, setActiveTab] = useState('explore');  
 
   useEffect(() => {
     const savedBookmarks = localStorage.getItem('bookmarkedCards')
@@ -27,19 +26,12 @@ function CommunityHub() {
     );
   };
 
-  const handleFilterToggle = (filter) => {
-    setFiltered(filter === 'favorites');
-    setActiveTab(filter);  
+  const filterFavorites = () => {
+    setFiltered(true);
   };
 
   const resetFilter = () => {
-    setActiveTab('explore'); // Set active tab to 'explore'
-    // Add additional logic to reset filters if necessary
-  };
-
-  const filterFavorites = () => {
-    setActiveTab('favorites'); // Set active tab to 'favorites'
-    // Add additional logic to filter favorites if necessary
+    setFiltered(false);
   };
 
   const cardInfo = [
@@ -70,18 +62,12 @@ function CommunityHub() {
 
       <div className="flex justify-center items-center mt-6">
         <div className="text-center mx-4">
-          <button
-            className={`text-xl font-semibold border-b-4 ${activeTab === 'explore' ? 'border-black' : 'border-transparent hover:border-black'}`}
-            onClick={resetFilter}
-          >
-            Explore
+          <button className="text-xl font-semibold border-b-4 border-transparent hover:border-black" onClick={resetFilter}>
+            Exploreeeeee
           </button>
         </div>
         <div className="text-center mx-4">
-          <button
-            className={`text-xl font-semibold border-b-4 ${activeTab === 'favorites' ? 'border-black' : 'border-transparent hover:border-black'}`}
-            onClick={filterFavorites}
-          >
+          <button className="text-xl font-semibold border-b-4 border-transparent hover:border-black" onClick={filterFavorites}>
             Favorites
           </button>
         </div>
