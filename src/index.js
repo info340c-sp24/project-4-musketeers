@@ -15,25 +15,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBHi0vaDjbtI2M9IOF0afct3adv07i1TiE",
-  authDomain: "fourmusketeers-102431.firebaseapp.com",
-  databaseURL: "https://fourmusketeers-102431-default-rtdb.firebaseio.com",
-  projectId: "fourmusketeers-102431",
-  storageBucket: "fourmusketeers-102431.appspot.com",
-  messagingSenderId: "492158954689",
-  appId: "1:492158954689:web:a92457b726ad35271a7840",
-  measurementId: "G-BJKMTWHXXZ",
+  apiKey: "AIzaSyAIkJw5qnqdU2g9xJIcCgFraHH_rVn_U1U",
+  authDomain: "echosystem-485df.firebaseapp.com",
+  projectId: "echosystem-485df",
+  storageBucket: "echosystem-485df.appspot.com",
+  messagingSenderId: "251611996826",
+  appId: "1:251611996826:web:5d0c4b72c86c2485e23523",
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 function App() {
   return (
