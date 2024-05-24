@@ -41,7 +41,7 @@ const Home = () => {
       </div>
 
       <div className="absolute mr-4 z-20 flex space-x-8 flex-wrap mx-auto bottom-10">
-        <Link to="/mastercards" className="nav-button text-white">MASTERCLASS</Link>
+        <Link to="/masterclass" className="nav-button text-white">MASTERCLASS</Link>
         <Link to="/communityhub" className="nav-button decoration-sky-60 hover:text-blue text-white">COMMUNITY HUB</Link>
       </div>
     </div>

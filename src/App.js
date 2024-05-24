@@ -10,8 +10,11 @@ import CommunityHub from "./pages/CommunityHub";
 import MasterCards from "./pages/MasterCards";
 import Masterclass from "./pages/Masterclass";
 import SignUp from "./pages/SignUp";
+import CommunityForm from "./pages/CommunityForm";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AOS from 'aos'; // Import AOS directly
+import 'aos/dist/aos.css';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -32,6 +35,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 function App() {
+  useEffect(() => {
+    AOS.init(); // Initialize AOS directly
+  }, []);
+
   return (
     <ThemeProvider>
       <BrowserRouter>
@@ -44,6 +51,7 @@ function App() {
             <Route path="communityhub" element={<CommunityHub />} />
             <Route path="masterclass" element={<Masterclass />} />
             <Route path="mastercards" element={<MasterCards />} />
+            <Route path="communityform" element={<CommunityForm />} />
           </Route>
           <Route path="signup" element={<SignUp />} />
           <Route path="*" element={<NoPage />} />

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import CommunityCard from '../components/CommunityCard'; 
-import './communityhub.css';
+import { useNavigate } from 'react-router-dom'; 
 
 function CommunityHub() {
   const [bookmarkedCards, setBookmarkedCards] = useState([]);
   const [filtered, setFiltered] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedBookmarks = localStorage.getItem('bookmarkedCards')
@@ -34,6 +35,32 @@ function CommunityHub() {
     setFiltered(false);
   };
 
+  const handleAddProjectClick = () => {
+    navigate('/communityform'); // Use the navigate function to navigate
+  };
+
+  const headerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    color: 'pink',
+    width: '100%',
+    position: 'relative' // For absolute positioning of the button
+  };
+
+  const addProjectButtonStyle = {
+    position: 'absolute',
+    right: '20px', // Adjust according to the desired location
+    top: '10px', // Adjust according to the desired location
+    padding: '10px',
+    backgroundColor: 'grey', // Button background color
+    color: 'white', // Text color
+    cursor: 'pointer',
+    border: 'none',
+    borderRadius: '10px'
+  };
+
   const cardInfo = [
     { id: 1, title: "Fred Again.. 1", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred1.png" },
     { id: 2, title: "Peggy Gou 1", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy1.png" },
@@ -59,6 +86,12 @@ function CommunityHub() {
       <Helmet>
         <title>EchoSystem | Community Hub</title>
       </Helmet>
+
+      <div style={headerStyle}>
+        <button style={addProjectButtonStyle} onClick={handleAddProjectClick}>
+          + Add Project
+        </button>
+      </div>
 
       <div className="flex justify-center items-center mt-6">
         <div className="text-center mx-4">

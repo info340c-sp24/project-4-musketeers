@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container-fluid p-0">
         <div className="d-flex justify-content-center align-items-center py-3">
           <span className="mx-3">Register for free</span>
-          <a href="/signup" className="btn btn-outline-light rounded-pill hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded-full focus:ring focus:ring-violet-300" role="button" style={{ textDecoration: 'none' }}>
-            <span className='hover:text-black'>Sign Up</span>
+          <a href="/signup" className="btn btn-outline-light rounded-pill mx-3 transition-colors duration-300 group hover:bg-white" role="button" style={{ textDecoration: 'none' }}>
+            <span className="group-hover:text-black">Sign Up</span>
           </a>
         </div>
       </div>
