@@ -27,20 +27,26 @@ const Home = () => {
         autoPlay
         loop
         muted
-        className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+        className="absolute inset-0 z-10 w-full h-full object-cover"
       />
-      <div className="absolute top-0 right-0 mt-4 mr-4 z-20 flex space-x-4">
+
+      <div className="absolute top-0 right-8 mt-4 mr-4 z-20 flex space-x-4">
         <Link to="/signup" className="nav-button text-white">SIGN UP</Link>
-        <Link to="/mastercards" className="nav-button text-white">MASTERCLASS</Link>
-        <Link to="/communityhub" className="nav-button text-white">COMMUNITY HUB</Link>
       </div>
-      <div className="relative z-20 text-center text-white">
-        <h1>EchoSystem</h1>
-        <div className="tagline">
+      <div className="relative z-20 text-center text-white pb-6">
+        <div className='text-4xl lg:text-7xl font-extrabold pb-4'>ECHOSYSTEM</div>
+        <div className="tagline text-xl pt-2">
           we <span id="changing-text">{changingText}</span> musicians
         </div>
       </div>
+
+      <div className="absolute mr-4 z-20 flex space-x-8 flex-wrap mx-auto bottom-10">
+        <Link to="/mastercards" className="nav-button text-white">MASTERCLASS</Link>
+        <Link to="/communityhub" className="nav-button decoration-sky-60 hover:text-blue text-white">COMMUNITY HUB</Link>
+      </div>
     </div>
+    
+    
   );
 };
 

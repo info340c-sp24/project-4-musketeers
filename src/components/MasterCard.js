@@ -35,7 +35,7 @@ const SearchBarComponent = () => {
     <div className="max-w-7xl mx-auto p-2 lg:p-5">
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/4 pr-4 mb-4 lg:mb-0">
-          {['all', 'violin', 'drums', 'vocals', 'edm', 'e-guitar', 'Bottomwear'].map(category => (
+          {['all', 'violin', 'drums', 'vocals', 'edm', 'e-guitar'].map(category => (
             <button key={category} onClick={() => filterProduct(category)} className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded mb-2 w-full">
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
