@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Email:", email, "Password:", password);
-    // Here you might want to add the code to connect to your backend
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log("Email:", email, "Password:", password);
+  //   // Here you might want to add the code to connect to your backend
+  // };
 
   return (
     <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">

@@ -15,3 +15,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@layer utilities {
+  .nav {
+    @apply relative ml-10 text-gray-500 font-medium tracking-[1px] hover:text-white;
+  }
+
+  .nav::after {
+    @apply content-[''] bg-gradient-to-r from-indigo-200 via-white to-indigo-200 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
+  }
+
+  .nav:hover::after {
+    @apply w-[100%];
+  }
+}

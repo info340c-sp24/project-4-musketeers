@@ -1,6 +1,12 @@
+import { Helmet } from "react-helmet";
+
 export default function Masterclass() {
     return (
+      
       <div>
+        <Helmet>
+        <title>EchoSystem | Masterclass</title>
+      </Helmet>
         <div className="bg-black h-96 flex justify-center items-center">
           <div className="text-center md:space-x-4 lg:space-x-8">
             <div className="text-transparent bg-clip-text bg-gradient-to-t from-black to-gray-100 text-8xl lg:text-9xl font-bold md:inline-block" data-aos="fade-up" data-aos-duration="2000">

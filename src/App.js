@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
 import Layout from "./pages/Layout";
@@ -18,6 +17,7 @@ import 'aos/dist/aos.css';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth, connectAuthEmulatorm, signInWithEmailAndPassword, connectAuthEmulator } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -33,7 +33,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+// connectAuthEmulator(auth, 'http://localhost:3000/', ) // Continue this on VID
 
+// Fade Animations
 function App() {
   useEffect(() => {
     AOS.init(); // Initialize AOS directly
