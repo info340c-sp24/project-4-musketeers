@@ -89,7 +89,7 @@ function CommunityHub() {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="header flex justify-center items-center bg-pale-gray text-light-blue h-60 m-0">
+      <header className="header flex justify-center items-center bg-piano-blue text-light-blue h-60 m-0">
         <div className="container-fluid flex justify-center items-center">
           <h1 className="text-5xl font-bold text-center">COMMUNITY HUB</h1>
         </div>
