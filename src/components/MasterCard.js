@@ -59,13 +59,11 @@ const MasterCards = () => {
                  {/* Mobile Small Nav Buttons */}
                  <div className="flex flex-wrap justify-center gap-2 ">
                    {['all', 'violin', 'drums', 'vocals', 'edm', 'e-guitar'].map(category => (
-                     <button
-                       key={category}
-                       onClick={() => filterProduct(category)}
-                       className='group  hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full border-2 border-gray-500 '
-                     >
-                       <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
-                     </button>
+                      <button key={category}
+                            onClick={() => filterProduct(category)}
+                            className={`group rounded-full border-2 border-gray-500 py-2 px-4 ${activeCategory === category ? 'bg-gray-700' : 'hover:bg-gray-800'}`}>
+                      <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
+                      </button>
                    ))}
                  </div>
                </div>
