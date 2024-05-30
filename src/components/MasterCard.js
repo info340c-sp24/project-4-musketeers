@@ -61,7 +61,7 @@ const MasterCards = () => {
                    {['all', 'violin', 'drums', 'vocals', 'edm', 'e-guitar'].map(category => (
                       <button key={category}
                             onClick={() => filterProduct(category)}
-                            className={`group rounded-full border-2 border-gray-500 py-2 px-4 ${activeCategory === category ? 'bg-gray-700' : 'hover:bg-gray-800'}`}>
+                            className={`text-white group rounded-full border-2 border-gray-500 py-2 px-4 ${activeCategory === category ? 'bg-gray-700' : 'hover:bg-gray-800'}`}>
                       <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
                       </button>
                    ))}

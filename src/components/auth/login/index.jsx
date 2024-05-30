@@ -11,22 +11,50 @@ const Login = () => {
     const [isSigningIn, setIsSigningIn] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
 
+    const getErrorMessage = (error) => {
+        switch (error.code) {
+            case 'auth/invalid-email':
+                return 'Invalid email address.';
+            case 'auth/user-disabled':
+                return 'User account has been disabled.';
+            case 'auth/user-not-found':
+                return 'No user found with this email.';
+            case 'auth/wrong-password':
+                return 'Invalid password.';
+            case 'auth/invalid-credential':
+                return 'Invalid credentials.';
+            default:
+                return 'An error occurred. Please try again.';
+        }
+    }
+
     const onSubmit = async (e) => {
         e.preventDefault()
         if(!isSigningIn) {
             setIsSigningIn(true)
-            await doSignInWithEmailAndPassword(email, password)
+            setErrorMessage('')
+            try {
+                await doSignInWithEmailAndPassword(email, password)
+            } catch (error) {
+                setErrorMessage(getErrorMessage(error))
+                setIsSigningIn(false)
+            }
+            
             // doSendEmailVerification()
         }
     }
 
-    const onGoogleSignIn = (e) => {
+    const onGoogleSignIn = async (e) => {
         e.preventDefault()
         if (!isSigningIn) {
             setIsSigningIn(true)
-            doSignInWithGoogle().catch(err => {
+            setErrorMessage('')  // Clear previous errors
+            try {
+                await doSignInWithGoogle()
+            } catch (error) {
+                setErrorMessage(getErrorMessage(error))
                 setIsSigningIn(false)
-            })
+            }
         }
     }
 
