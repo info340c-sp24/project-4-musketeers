@@ -1,3 +1,4 @@
+// CommunityHub.js
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import CommunityCard from '../components/CommunityCard'; 
@@ -6,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function CommunityHub() {
   const [bookmarkedCards, setBookmarkedCards] = useState([]);
   const [filtered, setFiltered] = useState(false);
+  const [projects, setProjects] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -13,6 +15,26 @@ function CommunityHub() {
       ? JSON.parse(localStorage.getItem('bookmarkedCards'))
       : [];
     setBookmarkedCards(savedBookmarks);
+
+    const savedProjects = localStorage.getItem('projects')
+      ? JSON.parse(localStorage.getItem('projects'))
+      : [];
+    
+    // Predefined card info
+    const predefinedCards = [
+      { id: 1, projectName: "Fred Again.. 1", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred1.png", artistNames: [] },
+      { id: 2, projectName: "Peggy Gou 1", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy1.png", artistNames: [] },
+      { id: 3, projectName: "Fred Again.. 2", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred2.png", artistNames: [] },
+      { id: 4, projectName: "John Summit 1", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/john1.png", artistNames: [] },
+      { id: 5, projectName: "Peggy Gou 2", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy2.png", artistNames: [] },
+      { id: 6, projectName: "John Summit 2", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/john2.png", artistNames: [] },
+      { id: 7, projectName: "Fred Again.. 3", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred3.png", artistNames: [] },
+      { id: 8, projectName: "Fred Again.. 4", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred4.png", artistNames: [] }
+    ];
+
+    // Merge predefined cards with saved projects
+    const allProjects = [...predefinedCards, ...savedProjects];
+    setProjects(allProjects);
   }, []);
 
   useEffect(() => {
@@ -36,7 +58,7 @@ function CommunityHub() {
   };
 
   const handleAddProjectClick = () => {
-    navigate('/communityform'); // Use the navigate function to navigate
+    navigate('/communityform');
   };
 
   const headerStyle = {
@@ -46,39 +68,28 @@ function CommunityHub() {
     backgroundColor: 'white',
     color: 'pink',
     width: '100%',
-    position: 'relative' // For absolute positioning of the button
+    position: 'relative'
   };
 
   const addProjectButtonStyle = {
     position: 'absolute',
-    right: '20px', // Adjust according to the desired location
-    top: '10px', // Adjust according to the desired location
+    right: '20px',
+    top: '10px',
     padding: '10px',
-    backgroundColor: 'grey', // Button background color
-    color: 'white', // Text color
+    backgroundColor: '#2f3c7e',
+    color: 'white',
     cursor: 'pointer',
     border: 'none',
     borderRadius: '10px'
   };
 
-  const cardInfo = [
-    { id: 1, title: "Fred Again.. 1", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred1.png" },
-    { id: 2, title: "Peggy Gou 1", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy1.png" },
-    { id: 3, title: "Fred Again.. 2", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred2.png" },
-    { id: 4, title: "John Summit 1", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/john1.png" },
-    { id: 5, title: "Peggy Gou 2", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy2.png" },
-    { id: 6, title: "John Summit 2", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/john2.png" },
-    { id: 7, title: "Fred Again.. 3", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred3.png" },
-    { id: 8, title: "Fred Again.. 4", description: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred4.png" }
-  ];
-
   const filteredCards = filtered
-    ? cardInfo.filter((card) => bookmarkedCards.includes(card.id))
-    : cardInfo;
+    ? projects.filter((card) => bookmarkedCards.includes(card.id))
+    : projects;
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="header flex justify-center items-center bg-indigo-700 text-pink-200 h-60 m-0">
+      <header className="header flex justify-center items-center bg-pale-gray text-light-blue h-60 m-0">
         <div className="container-fluid flex justify-center items-center">
           <h1 className="text-5xl font-bold text-center">COMMUNITY HUB</h1>
         </div>

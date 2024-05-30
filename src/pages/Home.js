@@ -31,7 +31,7 @@ const Home = () => {
       />
 
       <div className="absolute top-0 right-8 mt-4 mr-4 z-20 flex space-x-4">
-        <Link to="/signup" className="nav-button text-white nav">SIGN UP</Link>
+        <Link to="/login" className="nav-button text-white nav">LOG IN / SIGN UP</Link>
       </div>
       <div className="relative z-20 text-center text-white pb-6">
         <div className='text-4xl lg:text-7xl font-extrabold pb-4'>ECHOSYSTEM</div>

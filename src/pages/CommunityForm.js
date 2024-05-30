@@ -1,32 +1,63 @@
+// CommunityForm.js
 import React, { useState } from 'react';
 
 function CommunityForm() {
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
-  const [artistNames, setArtistNames] = useState(['']);  // Initialize with one empty string
+  const [artistNames, setArtistNames] = useState(['']);
+  const [imageFile, setImageFile] = useState(null);
+  const [errors, setErrors] = useState('');
 
-  // Handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Project Name:', projectName);
-    console.log('Project Description:', projectDescription);
-    console.log('Artist Names:', artistNames);
-    // Optionally, reset the form state here if necessary
+
+    let formErrors = {};
+
+    if (!projectName) {
+      formErrors.projectName = 'Project Name is required';
+    }
+
+    if (!projectDescription) {
+      formErrors.projectDescription = 'Project Description is required';
+    }
+
+    if (!imageFile) {
+      formErrors.imageFile = 'Project Image is required';
+    }
+
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
+    setErrors({});
+
+    const newProject = {
+      id: new Date().getTime(),
+      projectName,
+      projectDescription,
+      artistNames,
+      imageUrl: URL.createObjectURL(imageFile)
+    };
+
+    const existingProjects = JSON.parse(localStorage.getItem('projects')) || [];
+    existingProjects.push(newProject);
+    localStorage.setItem('projects', JSON.stringify(existingProjects));
+
+    alert('Project added successfully!');
+
+    setProjectName('');
+    setProjectDescription('');
+    setArtistNames(['']);
+    setImageFile(null);
   };
 
-  // Handler to add new artist name input
-  const addArtistNameInput = () => {
-    setArtistNames([...artistNames, '']);
-  };
-
-  // Handler to update specific artist name in the state
   const handleArtistNameChange = (index, value) => {
     const newArtistNames = [...artistNames];
     newArtistNames[index] = value;
     setArtistNames(newArtistNames);
   };
 
-  // Handler to delete an artist name input
   const deleteArtistNameInput = (index) => {
     const newArtistNames = artistNames.filter((_, idx) => idx !== index);
     setArtistNames(newArtistNames);
@@ -47,7 +78,7 @@ function CommunityForm() {
   };
 
   const inputStyle = {
-    width: 'calc(100% - 45px)',  // Adjust width to accommodate buttons
+    width: 'calc(100% - 45px)',
     padding: '8px',
     margin: '10px 5px 10px 0',
     border: '1px solid #ccc',
@@ -66,6 +97,12 @@ function CommunityForm() {
     cursor: 'pointer'
   };
 
+  const errorStyle = {
+    color: 'red',
+    fontSize: '12px',
+    marginTop: '5px'
+  };
+
   return (
     <div style={formContainerStyle}>
       <h1 style={{ textAlign: 'center', fontSize: '32px', fontWeight: 'bold' }}>Add a New Project</h1>
@@ -78,6 +115,7 @@ function CommunityForm() {
             onChange={(e) => setProjectName(e.target.value)}
             style={{ ...inputStyle, width: '100%' }}
           />
+          {errors.projectName && <p style={errorStyle}>{errors.projectName}</p>}
         </div>
         <div>
           <label style={labelStyle}>Project Description:</label>
@@ -86,9 +124,10 @@ function CommunityForm() {
             onChange={(e) => setProjectDescription(e.target.value)}
             style={{ ...inputStyle, height: '100px', width: '100%' }}
           />
+          {errors.projectDescription && <p style={errorStyle}>{errors.projectDescription}</p>}
         </div>
         <div>
-          <label style={labelStyle}>Artist Names:</label>
+          <label style={labelStyle}>Collaborators:</label>
           {artistNames.map((name, index) => (
             <div key={index}>
               <input
@@ -102,7 +141,16 @@ function CommunityForm() {
               )}
             </div>
           ))}
-          <button type="button" onClick={addArtistNameInput} style={buttonStyle}>+ Add Artist</button>
+          {/* <button type="button" onClick={addArtistNameInput} style={buttonStyle}>+ Add Artist</button> */}
+        </div>
+        <div>
+          <label style={labelStyle}>Project Image:</label>
+          <input
+            type="file"
+            onChange={(e) => setImageFile(e.target.files[0])}
+            style={{ margin: '10px 0' }}
+          />
+          {errors.imageFile && <p style={errorStyle}>{errors.imageFile}</p>}
         </div>
         <button type="submit" style={{ ...buttonStyle, width: '100%', marginTop: '20px' }}>Submit</button>
       </form>

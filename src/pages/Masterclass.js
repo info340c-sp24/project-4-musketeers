@@ -1,6 +1,14 @@
+import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
+import { useNavigate } from 'react-router-dom';
 
 export default function Masterclass() {
+   const navigate = useNavigate(); 
+
+   const navigateToMasterCards = (category) => {
+    navigate('/mastercards', { state: { category } });
+   };
+
     return (
       
       <div>
@@ -17,34 +25,35 @@ export default function Masterclass() {
             </div>
           </div>
         </div>
+
         {/* Carousel Start */}
         <div className="overflow-x-auto h-5/6 scroll-smooth">
           <div className="flex">
-            <div className="relative bg-piano-blue w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-piano-blue w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('all')} style={{ cursor: 'pointer' }}>
               <img src="/images/piano.png" alt="piano" className="h-auto" />
               <div className="absolute top-0 left-1 text-light-pink text-7xl font-extrabold text-left">VIEW ALL</div>
             </div>
-            <div className="relative bg-vocals-creme w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-vocals-creme w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('vocals')} style={{ cursor: 'pointer' }}>
               <img src="/images/vocals.png" alt="vocals" className="h-auto" />
               <div className="absolute top-0 left-1 text-black text-7xl font-extrabold text-left">VOCALS</div>
             </div>
-            <div className="relative bg-light-blue w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-light-blue w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('e-guitar')} style={{ cursor: 'pointer' }}>
               <img src="/images/guitar.png" alt="guitar" className="h-auto" />
               <div className="absolute top-0 left-1 text-white text-7xl font-extrabold text-left">E-GUITAR</div>
             </div>
-            <div className="relative bg-white w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-white w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('drums')} style={{ cursor: 'pointer' }}>
               <img src="/images/drums.png" alt="drums" className="h-auto" />
               <div className="absolute top-0 left-1 text-black text-7xl font-extrabold text-left">DRUMS</div>
             </div>
-            <div className="relative bg-pale-gray w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-pale-gray w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('edm')} style={{ cursor: 'pointer' }}>
               <img src="/images/edm.png" alt="edm" className="h-auto" />
               <div className="absolute top-0 left-1 text-piano-blue text-7xl font-extrabold text-left">EDM</div>
             </div>
-            <div className="relative bg-piano-blue w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-piano-blue w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('harp')} style={{ cursor: 'pointer' }}>
               <img src="/images/harp.png" alt="harp" className="h-auto" />
               <div className="absolute top-0 left-1 text-white text-7xl font-extrabold text-left">HARP</div>
             </div>
-            <div className="relative bg-light-pink w-96 flex-shrink-0 h-5/6 flex items-center justify-center">
+            <div className="relative bg-light-pink w-96 flex-shrink-0 h-5/6 flex items-center justify-center" onClick={() => navigateToMasterCards('rap')} style={{ cursor: 'pointer' }}>
               <img src="/images/rap.png" alt="rap" className="h-auto" />
               <div className="absolute top-0 left-1 text-black text-7xl font-extrabold text-left">RAP</div>
             </div>
