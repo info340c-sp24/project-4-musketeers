@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Navigate, Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../contexts/authContext/index'
 import { doCreateUserWithEmailAndPassword } from '../../../pages/auth'
 
@@ -15,11 +15,39 @@ const Register = () => {
 
     const { userLoggedIn } = useAuth();
 
+    const getErrorMessage = (error) => {
+        switch (error.code) {
+            case 'auth/email-already-in-use':
+                return 'This email is already in use.';
+            case 'auth/invalid-email':
+                return 'Invalid email address.';
+            case 'auth/operation-not-allowed':
+                return 'Operation not allowed. Please contact support.';
+            case 'auth/weak-password':
+                return 'Password is too weak.';
+            default:
+                return 'An error occurred. Please try again.';
+        }
+    }
+
     const onSubmit = async (e) => {
         e.preventDefault()
-        if(!isRegistering) {
+
+        if (password !== confirmPassword) {
+            setErrorMessage('Passwords do not match.')
+            return
+        }
+
+        if (!isRegistering) {
             setIsRegistering(true)
-            await doCreateUserWithEmailAndPassword(email, password)
+            setErrorMessage('')  // Clear previous errors
+            try {
+                await doCreateUserWithEmailAndPassword(email, password)
+                navigate('/home')
+            } catch (error) {
+                setErrorMessage(getErrorMessage(error))
+                setIsRegistering(false)
+            }
         }
     }
 

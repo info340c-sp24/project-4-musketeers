@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Navigate, Link } from 'react-router-dom'
-import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../pages/auth'
+import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../../../contexts/authContext/index'
+import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../pages/auth'
 
 const Login = () => {
     const { userLoggedIn } = useAuth();

@@ -1,8 +1,8 @@
 // CommunityHub.js
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import CommunityCard from '../components/CommunityCard'; 
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import CommunityCard from '../components/CommunityCard';
 
 function CommunityHub() {
   const [bookmarkedCards, setBookmarkedCards] = useState([]);
@@ -22,14 +22,14 @@ function CommunityHub() {
     
     // Predefined card info
     const predefinedCards = [
-      { id: 1, projectName: "Fred Again.. 1", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred1.png", artistNames: [] },
-      { id: 2, projectName: "Peggy Gou 1", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy1.png", artistNames: [] },
-      { id: 3, projectName: "Fred Again.. 2", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred2.png", artistNames: [] },
-      { id: 4, projectName: "John Summit 1", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/john1.png", artistNames: [] },
-      { id: 5, projectName: "Peggy Gou 2", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/peggy2.png", artistNames: [] },
-      { id: 6, projectName: "John Summit 2", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/john2.png", artistNames: [] },
-      { id: 7, projectName: "Fred Again.. 3", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred3.png", artistNames: [] },
-      { id: 8, projectName: "Fred Again.. 4", projectDescription: "If a dog chews shoes whose shoes does he choose?", imageUrl: "../images/fred4.png", artistNames: [] }
+      { id: 1, projectName: "Streamline Sound", projectDescription: "Enhancing Audio Quality for Streaming Platforms", imageUrl: "../images/comcard-1.avif", artistNames: ["Steven Heng"] },
+      { id: 2, projectName: "The Digital Maestro", projectDescription: "Developing a Music Composition App", imageUrl: "../images/comcard-2.jpg", artistNames: ["Enrico Pratama, Carolyn Chen"] },
+      { id: 3, projectName: "Virtual Virtuoso", projectDescription: "Building a VR Concert Experience", imageUrl: "../images/comcard-3.jpg", artistNames: ["Agnes Bisma"] },
+      { id: 4, projectName: "The Beat Goes On", projectDescription: "Preserving Indigenous Music Traditions", imageUrl: "../images/comcard-4.jpg", artistNames: ["Edward Lee"] },
+      { id: 5, projectName: "Synth Waves", projectDescription: "Exploring Retro Sounds in Modern Tracks", imageUrl: "../images/comcard-5.jpeg", artistNames: ["James Kim"] },
+      { id: 6, projectName: "Sound Branding", projectDescription: "Creating Signature Sounds for Brands", imageUrl: "../images/comcard-6.jpg", artistNames: ["Theophila Abigail"] },
+      { id: 7, projectName: "Tour de Force", projectDescription: "Planning and Executing a Virtual Music Tour", imageUrl: "../images/comcard-7.jpg", artistNames: ["Eugene Wongso, Samuel Purnama"] },
+      { id: 8, projectName: "Echoes of the City", projectDescription: "An Urban Soundtrack", imageUrl: "../images/comcard-8.jpg", artistNames: ["Aurelle Alexander, Valerie Junus"] }
     ];
 
     // Merge predefined cards with saved projects
