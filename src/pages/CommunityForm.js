@@ -1,5 +1,7 @@
-// CommunityForm.js
 import React, { useState } from 'react';
+import { ref, set } from 'firebase/database';
+import { db } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 function CommunityForm() {
   const [projectName, setProjectName] = useState('');
@@ -7,6 +9,7 @@ function CommunityForm() {
   const [artistNames, setArtistNames] = useState(['']);
   const [imageFile, setImageFile] = useState(null);
   const [errors, setErrors] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,11 +43,14 @@ function CommunityForm() {
       imageUrl: URL.createObjectURL(imageFile)
     };
 
-    const existingProjects = JSON.parse(localStorage.getItem('projects')) || [];
-    existingProjects.push(newProject);
-    localStorage.setItem('projects', JSON.stringify(existingProjects));
-
-    alert('Project added successfully!');
+    // Save the project data to Firebase Realtime Database
+    set(ref(db, 'projects/' + newProject.id), newProject)
+      .then(() => {
+        alert('Project added successfully!');
+      })
+      .catch((error) => {
+        console.error("Error adding project: ", error);
+      });
 
     setProjectName('');
     setProjectDescription('');
@@ -61,6 +67,10 @@ function CommunityForm() {
   const deleteArtistNameInput = (index) => {
     const newArtistNames = artistNames.filter((_, idx) => idx !== index);
     setArtistNames(newArtistNames);
+  };
+
+  const handleBackClick = () => {
+    navigate('/communityhub'); // Adjust the path to your community hub route
   };
 
   const formContainerStyle = {
@@ -152,8 +162,16 @@ function CommunityForm() {
           />
           {errors.imageFile && <p style={errorStyle}>{errors.imageFile}</p>}
         </div>
-        <button type="submit" style={{ ...buttonStyle, width: '100%', marginTop: '20px' }}>Submit</button>
+        <button className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' type="submit" style={{  width: '100%', marginTop: '20px' }}>Submit</button>
       </form>
+      <button
+      className='py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+        type="button"
+        onClick={handleBackClick}
+        style={{  width: '100%', marginTop: '10px', backgroundColor: '#d3d3d3' }}
+      >
+        Back to Community Hub
+      </button>
     </div>
   );
 }

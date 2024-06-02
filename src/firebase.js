@@ -1,6 +1,8 @@
 // firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getDatabase } from "firebase/database"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAIkJw5qnqdU2g9xJIcCgFraHH_rVn_U1U",
@@ -9,10 +11,12 @@ const firebaseConfig = {
   storageBucket: "echosystem-485df.appspot.com",
   messagingSenderId: "251611996826",
   appId: "1:251611996826:web:5d0c4b72c86c2485e23523",
+  databaseURL: "https://echosystem-485df-default-rtdb.firebaseio.com/"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const storage = getStorage(app);
+const db = getDatabase(app);
 
-export { auth, app };
-  
+export { auth, app, storage, db };  

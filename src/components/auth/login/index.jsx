@@ -59,12 +59,19 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="relative w-full h-screen">
+            <video
+                src="../images/EchoSysVid.mp4"
+                autoPlay
+                loop
+                muted
+                className="absolute inset-0 w-full h-full object-cover z-0"
+            />
             {/* Change the to=XXX if need to change when user is logged in */}
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
 
-            <main className="w-full h-screen flex self-center place-content-center place-items-center">
-                <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl">
+            <main className="relative z-10 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
+                <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
                     <div className="text-center">
                         <div className="mt-2">
                             <h3 className="text-gray-800 text-xl font-semibold sm:text-2xl">Welcome Back</h3>
@@ -83,7 +90,7 @@ const Login = () => {
                                 autoComplete='email'
                                 required
                                 value={email} onChange={(e) => { setEmail(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
@@ -97,7 +104,7 @@ const Login = () => {
                                 autoComplete='current-password'
                                 required
                                 value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
@@ -114,13 +121,15 @@ const Login = () => {
                         </button>
                     </form>
                     <p className="text-center text-sm">Don't have an account? <Link to={'/register'} className="hover:underline font-bold">Sign up</Link></p>
+                    <p className="text-center text-sm"> <Link to={'/'} className="hover:underline font-bold">Back to home</Link></p>
                     <div className='flex flex-row text-center w-full'>
-                        <div className='border-b-2 mb-2.5 mr-2 w-full'></div><div className='text-sm font-bold w-fit'>OR</div><div className='border-b-2 mb-2.5 ml-2 w-full'></div>
+                        <div className='border-b-2 border-gray-500 mb-2.5 mr-2 w-full'></div><div className='text-sm font-bold w-fit'>OR</div><div className='border-b-2 border-gray-500 mb-2.5 ml-2 w-full'></div>
                     </div>
                     <button
                         disabled={isSigningIn}
                         onClick={(e) => { onGoogleSignIn(e) }}
-                        className={`w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium  ${isSigningIn ? 'cursor-not-allowed' : 'hover:bg-gray-100 transition duration-300 active:bg-gray-100'}`}>
+                        className={`w-full flex items-center justify-center gap-x-3 py-2.5 border border-gray-300 shadow-lg rounded-lg text-sm font-medium  ${isSigningIn ? 'cursor-not-allowed' : 'hover:bg-gray-100 transition duration-300 active:bg-gray-100'}`}
+                        style={{ borderColor: '#9E9E9E' }}>
                         <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_17_40)">
                                 <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />

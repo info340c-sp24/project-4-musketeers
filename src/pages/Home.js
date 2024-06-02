@@ -4,16 +4,21 @@ import { Helmet } from 'react-helmet';
 
 const Home = () => {
   const [changingText, setChangingText] = useState('amplify');
+  const [animationClass, setAnimationClass] = useState('fade-slide-in');
   const texts = ["amplify", "empower", "elevate", "harmonize"];
   let count = 0;
 
   useEffect(() => {
     const updateText = () => {
-      setChangingText(texts[count % texts.length]);
-      count++;
+      setAnimationClass('fade-slide-out');
+      setTimeout(() => {
+        setChangingText(texts[count % texts.length]);
+        setAnimationClass('fade-slide-in');
+        count++;
+      }, 500); // This timeout should match the duration of fadeSlideOut animation
     };
 
-    const intervalId = setInterval(updateText, 2500);
+    const intervalId = setInterval(updateText, 2000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -34,9 +39,9 @@ const Home = () => {
         <Link to="/login" className="nav-button text-white nav">LOG IN / SIGN UP</Link>
       </div>
       <div className="relative z-20 text-center text-white pb-6">
-        <div className='text-4xl lg:text-7xl font-extrabold pb-4'>ECHOSYSTEM</div>
-        <div className="tagline text-xl pt-2">
-          we <span id="changing-text">{changingText}</span> musicians
+        <div className='text-4xl lg:text-7xl font-extrabold pb-4' data-aos="fade-down" data-aos-duration="2000">ECHOSYSTEM</div>
+        <div className="tagline text-xl pt-2" data-aos="fade-up" data-aos-duration="2000">
+          we <span id="changing-text" className={animationClass}>{changingText}</span> musicians
         </div>
       </div>
 
@@ -45,8 +50,6 @@ const Home = () => {
         <Link to="/communityhub" className="nav-button decoration-sky-60 hover:text-blue text-white nav">COMMUNITY HUB</Link>
       </div>
     </div>
-    
-    
   );
 };
 

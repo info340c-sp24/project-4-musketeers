@@ -52,11 +52,19 @@ const Register = () => {
     }
 
     return (
-        <>
+        <div className="relative w-full h-screen">
+            <video
+                src="../images/EchoSysVid.mp4"
+                autoPlay
+                loop
+                muted
+                className="absolute inset-0 w-full h-full object-cover z-0"
+            />
+
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
 
-            <main className="w-full h-screen flex self-center place-content-center place-items-center">
-                <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl">
+            <main className="relative z-10 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
+                <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
                     <div className="text-center mb-6">
                         <div className="mt-2">
                             <h3 className="text-gray-800 text-xl font-semibold sm:text-2xl">Create a New Account</h3>
@@ -76,7 +84,7 @@ const Register = () => {
                                 autoComplete='email'
                                 required
                                 value={email} onChange={(e) => { setEmail(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
@@ -90,7 +98,7 @@ const Register = () => {
                                 autoComplete='new-password'
                                 required
                                 value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
@@ -104,7 +112,7 @@ const Register = () => {
                                 autoComplete='off'
                                 required
                                 value={confirmPassword} onChange={(e) => { setconfirmPassword(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
@@ -122,11 +130,12 @@ const Register = () => {
                         <div className="text-sm text-center">
                             Already have an account? {'   '}
                             <Link to={'/login'} className="text-center text-sm hover:underline font-bold">Continue</Link>
+                            <p className="text-center text-sm"> <Link to={'/'} className="hover:underline font-bold">Back to home</Link></p>
                         </div>
                     </form>
                 </div>
             </main>
-        </>
+        </div>
     )
 }
 
