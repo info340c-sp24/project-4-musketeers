@@ -65,6 +65,7 @@ const Login = () => {
                 autoPlay
                 loop
                 muted
+                playsInline
                 className="absolute inset-0 w-full h-full object-cover z-0"
             />
             {/* Change the to=XXX if need to change when user is logged in */}

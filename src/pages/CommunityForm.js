@@ -78,7 +78,9 @@ function CommunityForm() {
     maxWidth: '600px',
     margin: '0 auto',
     paddingTop: '80px',
-    paddingBottom: '80px'
+    paddingBottom: '80px',
+    paddingLeft: '25px',
+    paddingRight: '25px'
   };
 
   const labelStyle = {
@@ -115,7 +117,7 @@ function CommunityForm() {
 
   return (
     <div style={formContainerStyle}>
-      <h1 style={{ textAlign: 'center', fontSize: '32px', fontWeight: 'bold' }}>Add a New Project</h1>
+      <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">Add a New Project</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label style={labelStyle}>Project Name:</label>

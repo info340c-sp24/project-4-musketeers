@@ -9,8 +9,15 @@ function CommunityHub() {
   const [filtered, setFiltered] = useState(false);
   const [projects, setProjects] = useState([]);
   const [activeTab, setActiveTab] = useState('explore');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
   const navigate = useNavigate();
   const db = getDatabase();
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 500);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const savedBookmarks = localStorage.getItem('bookmarkedCards')
@@ -83,12 +90,13 @@ function CommunityHub() {
     position: 'absolute',
     right: '20px',
     top: '10px',
-    padding: '10px',
+    padding: isMobile ? '5px 10px' : '10px 20px',
     backgroundColor: '#2f3c7e',
     color: 'white',
     cursor: 'pointer',
     border: 'none',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    fontSize: isMobile ? '12px' : '16px'
   };
 
   const filteredCards = filtered
